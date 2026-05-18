@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Vault - Secure Upload & Download</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>PDF Vault</h1>
+            <p>Securely store and retrieve your PDF documents</p>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <div class="drop-zone" id="drop-zone">
+                    <div class="icon">📄</div>
+                    <h3>Drag & Drop your PDFs here</h3>
+                    <p>or click to browse from your device</p>
+                    <input type="file" id="file-input" accept="application/pdf" multiple hidden>
+                </div>
+                <div id="upload-status" class="status-message"></div>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+            </section>
+
+            <section class="files-section">
+                <div class="files-header">
+                    <h2>Your Documents</h2>
+                    <button id="refresh-btn" class="icon-btn" title="Refresh list">🔄</button>
+                </div>
+                <div class="file-list" id="file-list">
+                    <!-- Files will be dynamically inserted here -->
+                    <div class="loading">Loading your files...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
